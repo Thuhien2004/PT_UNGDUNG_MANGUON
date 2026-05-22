@@ -28,5 +28,7 @@ Hướng dẫn:
 - -------------------------------------------------------------------------------------------
   -----------------------------------------------------------------------------------------
   # BÀI LÀM
-  1. 
-  
+  1.  TỔ CHỨC CSDL CHO HỆ THỐNG QUẢN LÝ TIỆM CẦM ĐỒ:
+Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà em chưa thể sửa được. Nên em dùng WSL+ubuntu
+  ![Uploading image.png…]()
+
