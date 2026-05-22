@@ -29,6 +29,10 @@ Hướng dẫn:
   -----------------------------------------------------------------------------------------
   # BÀI LÀM
   1.  TỔ CHỨC CSDL CHO HỆ THỐNG QUẢN LÝ TIỆM CẦM ĐỒ:
+
+2. SỬ DỤNG DOCKER TRÊN UBUNTU
 Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà em chưa thể sửa được. Nên em dùng WSL+ubuntu
-  ![Uploading image.png…]()
+<img width="638" height="424" alt="image" src="https://github.com/user-attachments/assets/0f54621c-1dbf-4384-96a1-a9743b4463de" />
+- Tạo project cho bài , xong tại cấu trúc thư mục.
+![Uploading image.png…]()
 
