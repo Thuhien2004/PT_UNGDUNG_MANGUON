@@ -147,6 +147,7 @@ class HopDongCamDo(models.Model):
 
 
 class ThanhToan(models.Model):
+
     hop_dong = models.ForeignKey(
         HopDongCamDo, on_delete=models.CASCADE,
         verbose_name="Hợp đồng"
@@ -162,6 +163,7 @@ class ThanhToan(models.Model):
         return f"TT HĐ #{self.hop_dong.id} - {self.ngay_thanh_toan}"
 
     class Meta:
+    
         verbose_name = "Thanh toán"
         verbose_name_plural = "Thanh toán" 
         '''
