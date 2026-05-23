@@ -65,8 +65,94 @@ Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà e
 
 - Sau đó vào trình duyệt chạy localhost , đăng nhập bằng tài khoản vừa tạo trước đó:
 <img width="1919" height="765" alt="image" src="https://github.com/user-attachments/assets/d1c861d8-ff25-4508-8ef5-af17eae441c5" />
-![Uploading image.png…]()
+<img width="959" height="1014" alt="image" src="https://github.com/user-attachments/assets/8652b291-f643-40ca-b936-3f7cde4b392c" />
 
 - Trang admin đã chạy, sau đó tiếp tục đưa cơ sở dữ liệu vào trang bằng cách tạo models.py:
+![Uploading image.png…]()
 
+'''from django.db import models
+class KhachHang(models.Model):
+    ho_ten = models.CharField(max_length=100, verbose_name="Họ tên")
+    so_dien_thoai = models.CharField(max_length=15, verbose_name="SĐT")
+    dia_chi = models.TextField(blank=True, verbose_name="Địa chỉ")
+    cmnd = models.CharField(max_length=20, unique=True, verbose_name="CMND/CCCD")
+
+    def __str__(self):
+        return f"{self.ho_ten} ({self.cmnd})"
+
+    class Meta:
+        verbose_name = "Khách hàng"
+        verbose_name_plural = "Khách hàng"
+
+
+class TaiSan(models.Model):
+    ten_tai_san = models.CharField(max_length=200, verbose_name="Tên tài sản")
+    mo_ta = models.TextField(blank=True, verbose_name="Mô tả")
+
+    def __str__(self):
+        return self.ten_tai_san
+
+    class Meta:
+        verbose_name = "Tài sản"
+        verbose_name_plural = "Tài sản"
+
+
+class HopDongCamDo(models.Model):
+    TRANG_THAI_CHOICES = [
+        ('dang_cam', 'Đang cầm'),
+        ('da_chuoc', 'Đã chuộc'),
+        ('qua_han', 'Quá hạn'),
+    ]
+    khach_hang = models.ForeignKey(
+        KhachHang, on_delete=models.CASCADE,
+        verbose_name="Khách hàng"
+    )
+    tai_san = models.ForeignKey(
+        TaiSan, on_delete=models.CASCADE,
+        verbose_name="Tài sản cầm"
+    )
+    so_tien_cam = models.DecimalField(
+        max_digits=15, decimal_places=0,
+        verbose_name="Số tiền cầm (VNĐ)"
+    )
+    lai_suat = models.DecimalField(
+        max_digits=5, decimal_places=2,
+        default=3.0, verbose_name="Lãi suất (%/tháng)"
+    )
+    ngay_cam = models.DateField(verbose_name="Ngày cầm")
+    ngay_dao_han = models.DateField(verbose_name="Ngày đáo hạn")
+    trang_thai = models.CharField(
+        max_length=20, choices=TRANG_THAI_CHOICES,
+        default='dang_cam', verbose_name="Trạng thái"
+    )
+    ghi_chu = models.TextField(blank=True, verbose_name="Ghi chú")
+
+    def __str__(self):
+        return f"HĐ #{self.id} - {self.khach_hang} - {self.ngay_dao_han}"
+
+    class Meta:
+        verbose_name = "Hợp đồng cầm đồ"
+        verbose_name_plural = "Hợp đồng cầm đồ"
+
+
+class ThanhToan(models.Model):
+    hop_dong = models.ForeignKey(
+        HopDongCamDo, on_delete=models.CASCADE,
+        verbose_name="Hợp đồng"
+    )
+    ngay_thanh_toan = models.DateField(verbose_name="Ngày thanh toán")
+    so_tien = models.DecimalField(
+        max_digits=15, decimal_places=0,
+        verbose_name="Số tiền (VNĐ)"
+    )
+    ghi_chu = models.TextField(blank=True, verbose_name="Ghi chú")
+
+    def __str__(self):
+        return f"TT HĐ #{self.hop_dong.id} - {self.ngay_thanh_toan}"
+
+    class Meta:
+        verbose_name = "Thanh toán"
+        verbose_name_plural = "Thanh toán" '''
+
+- Tạo bảng trong CSDL:
 
