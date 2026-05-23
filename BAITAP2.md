@@ -35,6 +35,28 @@ Hướng dẫn:
 2. SỬ DỤNG DOCKER TRÊN UBUNTU
 Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà em chưa thể sửa được. Nên em dùng WSL+ubuntu
 <img width="638" height="424" alt="image" src="https://github.com/user-attachments/assets/0f54621c-1dbf-4384-96a1-a9743b4463de" />
+
 - Tạo project cho bài , xong tại cấu trúc thư mục.
+<img width="956" height="730" alt="image" src="https://github.com/user-attachments/assets/9acdaa1b-1173-4001-9b62-eda3ce8707e6" />
+
+- Tạo file Dockerfile:
+<img width="955" height="335" alt="image" src="https://github.com/user-attachments/assets/032780d2-f7d3-4c2b-99a4-d4ff584ade2d" />
+
+- Tạo file requirement.txt
+<img width="927" height="198" alt="image" src="https://github.com/user-attachments/assets/bbf0d10d-7cda-4d7f-8788-9f56e57f4db8" />
+<img width="945" height="910" alt="image" src="https://github.com/user-attachments/assets/b9fd08ce-4640-498a-a4e9-bdffd52316a6" />
+
+- Tạo file Docker-compose.yml
+<img width="959" height="825" alt="image" src="https://github.com/user-attachments/assets/0a34a6bb-c756-42ac-a139-8984e89f80ea" />
+
+- Build và chạy docker bằng cú pháp : ''docker compose up -d --build'' , rồi chờ vài phút để tải Image về
+<img width="942" height="251" alt="image" src="https://github.com/user-attachments/assets/e531ab73-ac3a-46a0-bea1-fefb54727e9f" />
+<img width="944" height="154" alt="image" src="https://github.com/user-attachments/assets/35427a47-7444-40e8-b66a-884216e78fc0" />
+
+- Tạo app 'core' trong Django:
+<img width="955" height="200" alt="image" src="https://github.com/user-attachments/assets/f2d67b9d-8750-436f-88f3-fc8a3f32bba4" />
+ - Sửa file setting.py để kết nối MariaDB:
+
+- Vì dùng PyMySQL nên phải sửa thêm file --init__.py của project
 ![Uploading image.png…]()
 
