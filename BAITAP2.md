@@ -208,14 +208,23 @@ class ThanhToanAdmin(admin.ModelAdmin):
     list_display = ['hop_dong', 'ngay_thanh_toan', 'so_tien']
 
 - Sau đó restart lại Django và mở lại địa chỉ localhost:
-![Uploading image.png…]()
+<img width="973" height="540" alt="image" src="https://github.com/user-attachments/assets/a1510308-ebf7-4670-8854-1f88412a461f" />
 
 + Trang admin đã có đủ các bảng , bây giờ ta sẽ thêm dữ liệu mẫu vào để test:
   
 1. Click Khách hàng → Thêm vào → nhập thông tin → Lưu
+<img width="999" height="680" alt="image" src="https://github.com/user-attachments/assets/e19ac42b-b0df-43d8-b120-222e0e6532bb" />
 
 2. Click Tài sản → Thêm vào → nhập tên tài sản → Lưu
+<img width="1775" height="874" alt="image" src="https://github.com/user-attachments/assets/546013ce-56d6-4e9c-a29f-3ee68aae3267" />
 
 3. Click Hợp đồng cầm đồ → Thêm vào → chọn khách hàng, tài sản từ dropdown → nhập ngày đáo hạn là ngày hôm qua → Lưu
+<img width="1484" height="505" alt="image" src="https://github.com/user-attachments/assets/89854302-52dd-4764-b651-8ed44489c18f" />
 
+<img width="958" height="540" alt="image" src="https://github.com/user-attachments/assets/9db0fe08-a99a-4342-9be4-41f99f492611" />
+
+- Tiếp theo, làm trang " nợ đáo hạn" 
++ Tạo 3 file lần lượt:
+Views.py:
+![Uploading image.png…]()
 
