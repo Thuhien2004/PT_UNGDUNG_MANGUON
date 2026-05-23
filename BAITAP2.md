@@ -55,8 +55,18 @@ Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà e
 
 - Tạo app 'core' trong Django:
 <img width="955" height="200" alt="image" src="https://github.com/user-attachments/assets/f2d67b9d-8750-436f-88f3-fc8a3f32bba4" />
- - Sửa file setting.py để kết nối MariaDB:
 
+ - Sửa file setting.py để kết nối MariaDB:
 - Vì dùng PyMySQL nên phải sửa thêm file --init__.py của project
+<img width="943" height="278" alt="image" src="https://github.com/user-attachments/assets/f64dacb0-db24-4604-9549-be9508c2a2ed" />
+
+- Tạo tài khoản admin để đăng nhập:
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/bd5f0cd4-2b59-4c3f-b700-a109fe6e3b3f" />
+
+- Sau đó vào trình duyệt chạy localhost , đăng nhập bằng tài khoản vừa tạo trước đó:
+<img width="1919" height="765" alt="image" src="https://github.com/user-attachments/assets/d1c861d8-ff25-4508-8ef5-af17eae441c5" />
 ![Uploading image.png…]()
+
+- Trang admin đã chạy, sau đó tiếp tục đưa cơ sở dữ liệu vào trang bằng cách tạo models.py:
+
 
