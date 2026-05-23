@@ -72,10 +72,15 @@ Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà e
 
 '''
 from django.db import models
+
 class KhachHang(models.Model):
+
     ho_ten = models.CharField(max_length=100, verbose_name="Họ tên")
+    
     so_dien_thoai = models.CharField(max_length=15, verbose_name="SĐT")
+    
     dia_chi = models.TextField(blank=True, verbose_name="Địa chỉ")
+    
     cmnd = models.CharField(max_length=20, unique=True, verbose_name="CMND/CCCD")
 
     def __str__(self):
@@ -87,18 +92,23 @@ class KhachHang(models.Model):
 
 
 class TaiSan(models.Model):
+
     ten_tai_san = models.CharField(max_length=200, verbose_name="Tên tài sản")
+    
     mo_ta = models.TextField(blank=True, verbose_name="Mô tả")
 
     def __str__(self):
         return self.ten_tai_san
 
     class Meta:
+    
         verbose_name = "Tài sản"
+        
         verbose_name_plural = "Tài sản"
 
 
 class HopDongCamDo(models.Model):
+
     TRANG_THAI_CHOICES = [
         ('dang_cam', 'Đang cầm'),
         ('da_chuoc', 'Đã chuộc'),
