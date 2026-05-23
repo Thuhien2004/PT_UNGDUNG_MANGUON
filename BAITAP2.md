@@ -70,7 +70,8 @@ Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà e
 - Trang admin đã chạy, sau đó tiếp tục đưa cơ sở dữ liệu vào trang bằng cách tạo models.py:
 ![Uploading image.png…]()
 
-'''from django.db import models
+'''
+from django.db import models
 class KhachHang(models.Model):
     ho_ten = models.CharField(max_length=100, verbose_name="Họ tên")
     so_dien_thoai = models.CharField(max_length=15, verbose_name="SĐT")
@@ -152,7 +153,8 @@ class ThanhToan(models.Model):
 
     class Meta:
         verbose_name = "Thanh toán"
-        verbose_name_plural = "Thanh toán" '''
+        verbose_name_plural = "Thanh toán" 
+        '''
 
 - Tạo bảng trong CSDL:
 
