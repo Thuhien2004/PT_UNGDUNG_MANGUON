@@ -157,7 +157,7 @@ class ThanhToan(models.Model):
         '''
 
 - Tạo bảng trong CSDL:
-![Uploading image.png…]()
+<img width="1854" height="710" alt="image" src="https://github.com/user-attachments/assets/8161ad9e-7b07-4b7e-bf28-a1364731d0f2" />
 
 - Tiếp theo , đăng ký các bảng vào trang admin , sửa file admin.py
 
@@ -194,4 +194,16 @@ class HopDongCamDoAdmin(admin.ModelAdmin):
 class ThanhToanAdmin(admin.ModelAdmin):
 
     list_display = ['hop_dong', 'ngay_thanh_toan', 'so_tien']
-- 
+
+- Sau đó restart lại Django và mở lại địa chỉ localhost:
+![Uploading image.png…]()
+
++ Trang admin đã có đủ các bảng , bây giờ ta sẽ thêm dữ liệu mẫu vào để test:
+  
+1. Click Khách hàng → Thêm vào → nhập thông tin → Lưu
+
+2. Click Tài sản → Thêm vào → nhập tên tài sản → Lưu
+
+3. Click Hợp đồng cầm đồ → Thêm vào → chọn khách hàng, tài sản từ dropdown → nhập ngày đáo hạn là ngày hôm qua → Lưu
+
+
