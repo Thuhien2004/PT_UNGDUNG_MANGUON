@@ -68,7 +68,7 @@ Trước hết thì: Em thấy ubuntu trên VMware của em nó bị lỗi mà e
 <img width="959" height="1014" alt="image" src="https://github.com/user-attachments/assets/8652b291-f643-40ca-b936-3f7cde4b392c" />
 
 - Trang admin đã chạy, sau đó tiếp tục đưa cơ sở dữ liệu vào trang bằng cách tạo models.py:
-![Uploading image.png…]()
+<img width="954" height="433" alt="image" src="https://github.com/user-attachments/assets/898613b6-8567-457d-ae8c-293d6b4d1c45" />
 
 '''
 from django.db import models
@@ -157,4 +157,41 @@ class ThanhToan(models.Model):
         '''
 
 - Tạo bảng trong CSDL:
+![Uploading image.png…]()
 
+- Tiếp theo , đăng ký các bảng vào trang admin , sửa file admin.py
+
+from django.contrib import admin
+
+from .models import KhachHang, TaiSan, HopDongCamDo, ThanhToan
+
+@admin.register(KhachHang)
+
+class KhachHangAdmin(admin.ModelAdmin):
+
+    list_display = ['ho_ten', 'cmnd', 'so_dien_thoai', 'dia_chi']
+    
+    search_fields = ['ho_ten', 'cmnd']
+
+@admin.register(TaiSan)
+
+class TaiSanAdmin(admin.ModelAdmin):
+
+    list_display = ['ten_tai_san', 'mo_ta']
+
+@admin.register(HopDongCamDo)
+
+class HopDongCamDoAdmin(admin.ModelAdmin):
+
+    list_display = ['id', 'khach_hang', 'tai_san', 'so_tien_cam', 'ngay_dao_han', 'trang_thai']
+    
+    list_filter = ['trang_thai']
+    
+    search_fields = ['khach_hang__ho_ten']
+
+@admin.register(ThanhToan)
+
+class ThanhToanAdmin(admin.ModelAdmin):
+
+    list_display = ['hop_dong', 'ngay_thanh_toan', 'so_tien']
+- 
