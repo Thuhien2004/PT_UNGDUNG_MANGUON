@@ -252,13 +252,20 @@ urlpatterns = [
   
 + Đăng nhập vào cloudflared:
 <img width="1886" height="928" alt="image" src="https://github.com/user-attachments/assets/bfa2ac65-a3bf-4cbb-9b42-11d40f3b4785" />
-<img width="1393" height="174" alt="image" src="https://github.com/user-attachments/assets/533b2422-c254-4730-b38e-d08b92cdf202" />
-<img width="964" height="450" alt="image" src="https://github.com/user-attachments/assets/0e57ffef-24ce-4a60-a08c-02b807cc24d2" />
-<img width="957" height="957" alt="image" src="https://github.com/user-attachments/assets/09f5e91e-bb98-4ee4-834e-dafdc4b6c97f" />
-<img width="959" height="456" alt="image" src="https://github.com/user-attachments/assets/2a737311-e45b-4d6f-8a50-8decbab09a72" />
 
-+ Tạo cloudflared tunnel route, tạo file config
-<img width="1002" height="369" alt="image" src="https://github.com/user-attachments/assets/527e15c4-3a99-4775-a6ad-09c0ffa5d66f" />
++ Tạo cloudflared tunnel: 
+<img width="1852" height="895" alt="image" src="https://github.com/user-attachments/assets/722e9ad6-dfcb-4ebe-937e-935023bd94e8" />
+
 + Tạo DNS Record
-![Uploading image.png…]()
+<img width="939" height="123" alt="image" src="https://github.com/user-attachments/assets/bc2339c3-4b1b-4cbe-9a49-881aa927fcb3" />
+
++ Chạy tunnel bằng lệnh: ' cloudflared tunnel run 52bddbc8-5f76-40f6-9467-64cfbe746030 ' , rồi sau đó chạy domain theo tunnel đã tạo vào trình duyệt:
+<img width="1873" height="946" alt="image" src="https://github.com/user-attachments/assets/d206a865-6c7b-49ac-838c-2a1a4f8d39f2" />
+<img width="1809" height="786" alt="image" src="https://github.com/user-attachments/assets/534d32eb-f102-435f-8aca-cc0f0b38b6b6" />
+
+---> Tuy nhiên chưa sửa hết tên miền vào file setting nên trang chủ admin chưa hoạt động , vào sửa lại
+<img width="816" height="88" alt="image" src="https://github.com/user-attachments/assets/388a75bc-8f4c-432b-9018-eafb6484cf22" />
+
+Sau đó ' docker compose retart django ' và nhập ' cloudflared tunnel run 52bddbc8-5f76-40f6-9467-64cfbe746030 ' và vào lại trình duyệt, ta được:
+<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/cd258132-9f8c-4389-862f-e450fd2b979e" />
 
