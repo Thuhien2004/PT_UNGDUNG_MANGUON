@@ -226,19 +226,27 @@ class ThanhToanAdmin(admin.ModelAdmin):
 - Tiếp theo, làm trang " nợ đáo hạn" 
 + Tạo 3 file lần lượt:
 Views.py:
-![Uploading image.png…]()
+<img width="944" height="1013" alt="image" src="https://github.com/user-attachments/assets/c62b9330-9424-41b0-b231-eebc7eb847f3" />
 
 Urls.py:
 
-from django.contrib import admin
+from django.urls import path
 
-from django.urls import path, include
+from . import views
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
-    
-    path('', include('core.urls')),
+    path('', views.home_page, name='home'),
 ]
 
 - Tạo thư mục templates và file home.html:
+<img width="961" height="213" alt="image" src="https://github.com/user-attachments/assets/a29412cf-60e2-4d6b-b2b2-1e8e2ddce4cd" />
+
++ Sau đó khởi động lại Django:
+<img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/f53e11f0-24c1-4a77-830d-28e3ee27f7eb" />
+
++ Truy cập lại localhost để kiểm tra :
+![Uploading image.png…]()
+
+- Cài Clouflare Tunnel
+
