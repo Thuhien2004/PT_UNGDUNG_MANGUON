@@ -254,7 +254,11 @@ urlpatterns = [
 <img width="1886" height="928" alt="image" src="https://github.com/user-attachments/assets/bfa2ac65-a3bf-4cbb-9b42-11d40f3b4785" />
 <img width="1393" height="174" alt="image" src="https://github.com/user-attachments/assets/533b2422-c254-4730-b38e-d08b92cdf202" />
 <img width="964" height="450" alt="image" src="https://github.com/user-attachments/assets/0e57ffef-24ce-4a60-a08c-02b807cc24d2" />
-![Uploading image.png…]()
+<img width="957" height="957" alt="image" src="https://github.com/user-attachments/assets/09f5e91e-bb98-4ee4-834e-dafdc4b6c97f" />
+<img width="959" height="456" alt="image" src="https://github.com/user-attachments/assets/2a737311-e45b-4d6f-8a50-8decbab09a72" />
 
-+ Tạo cloudflared tunnel route
++ Tạo cloudflared tunnel route, tạo file config
+<img width="1002" height="369" alt="image" src="https://github.com/user-attachments/assets/527e15c4-3a99-4775-a6ad-09c0ffa5d66f" />
++ Tạo DNS Record
+![Uploading image.png…]()
 
