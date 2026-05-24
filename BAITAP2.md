@@ -246,7 +246,15 @@ urlpatterns = [
 <img width="1919" height="794" alt="image" src="https://github.com/user-attachments/assets/f53e11f0-24c1-4a77-830d-28e3ee27f7eb" />
 
 + Truy cập lại localhost để kiểm tra :
-![Uploading image.png…]()
+<img width="1871" height="906" alt="image" src="https://github.com/user-attachments/assets/7c9a78b2-b5fc-4fb2-bf21-45cce7ee50d8" />
 
 - Cài Clouflare Tunnel
+  
++ Đăng nhập vào cloudflared:
+<img width="1886" height="928" alt="image" src="https://github.com/user-attachments/assets/bfa2ac65-a3bf-4cbb-9b42-11d40f3b4785" />
+<img width="1393" height="174" alt="image" src="https://github.com/user-attachments/assets/533b2422-c254-4730-b38e-d08b92cdf202" />
+<img width="964" height="450" alt="image" src="https://github.com/user-attachments/assets/0e57ffef-24ce-4a60-a08c-02b807cc24d2" />
+![Uploading image.png…]()
+
++ Tạo cloudflared tunnel route
 
