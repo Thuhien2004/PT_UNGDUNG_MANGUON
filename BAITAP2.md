@@ -228,3 +228,17 @@ class ThanhToanAdmin(admin.ModelAdmin):
 Views.py:
 ![Uploading image.png…]()
 
+Urls.py:
+
+from django.contrib import admin
+
+from django.urls import path, include
+
+urlpatterns = [
+
+    path('admin/', admin.site.urls),
+    
+    path('', include('core.urls')),
+]
+
+- Tạo thư mục templates và file home.html:
