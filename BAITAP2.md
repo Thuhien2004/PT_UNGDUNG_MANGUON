@@ -268,4 +268,5 @@ urlpatterns = [
 
 Sau đó ' docker compose retart django ' và nhập ' cloudflared tunnel run 52bddbc8-5f76-40f6-9467-64cfbe746030 ' và vào lại trình duyệt, ta được:
 <img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/cd258132-9f8c-4389-862f-e450fd2b979e" />
+<img width="1844" height="781" alt="image" src="https://github.com/user-attachments/assets/99a74576-0289-4351-a44c-b7336331ce79" />
 
