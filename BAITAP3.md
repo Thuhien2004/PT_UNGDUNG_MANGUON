@@ -39,5 +39,12 @@ Nhận xét việc sử dụng mã nguồn mở wordpress để tạo website (t
 <img width="948" height="362" alt="image" src="https://github.com/user-attachments/assets/ef2cf506-3096-4997-9f68-23b65b2d28b4" />
 
 - Tiếp theo, mở trình duyệt chạy localhost `http://localhost:8090` để cài đặt Wordpress và ` http://localhost:8082` để PHPMyadmin xem cơ sở dữ liệu:
++ Trước tiên chạy cài đặt Wordpress, vào chọn ngôn ngữ và điền thông tin vào các mục:
 <img width="1789" height="1021" alt="image" src="https://github.com/user-attachments/assets/84ae5b5b-dd91-4ede-b6ff-569d0a9d1801" />
+<img width="1162" height="724" alt="image" src="https://github.com/user-attachments/assets/9b6785ad-3df6-44d9-917a-9fe493032f58" />
+
++ Sau khi chọn cài đặt wordpress, màn hình hiện ra giao diện đăng nhập, nhập tên đăng nhập và mật khẩu để vào trang quản lý:
+<img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/3f8e4c35-6543-4aa0-b5f5-866147892f30" />
+
++ Giờ là bước cài tunnel:
 
