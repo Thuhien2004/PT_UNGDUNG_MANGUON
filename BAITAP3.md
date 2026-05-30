@@ -60,4 +60,29 @@ Nhận xét việc sử dụng mã nguồn mở wordpress để tạo website (t
 + Vào dash.cloudflare.com → thuhien2004.io.vn → DNS → Records . Nếu thấy có DNS rồi, thì vào lại trang chủ admin wordpress -> vào cài đặt chung rồi, nhập địa chỉ Url theo tunnel đã tạo:
 <img width="1916" height="969" alt="image" src="https://github.com/user-attachments/assets/4cabf4c6-28d6-4091-9984-b7c57ef2125b" />
 
+- tạo csdl trống bởi PHPMyAdmin, phải tạo database qua PHPMyAdmin trước, rồi truyền thông tin đó vào WordPress!
++ Vào PHPMyAdmin tạo database:
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/ac36c459-a10a-41b1-9f8c-557dba0fb7bb" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
