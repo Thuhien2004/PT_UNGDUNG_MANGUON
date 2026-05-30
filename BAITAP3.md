@@ -46,5 +46,14 @@ Nhận xét việc sử dụng mã nguồn mở wordpress để tạo website (t
 + Sau khi chọn cài đặt wordpress, màn hình hiện ra giao diện đăng nhập, nhập tên đăng nhập và mật khẩu để vào trang quản lý:
 <img width="1917" height="1031" alt="image" src="https://github.com/user-attachments/assets/3f8e4c35-6543-4aa0-b5f5-866147892f30" />
 
-+ Giờ là bước cài tunnel:
+-  Giờ là bước cài tunnel:
++ Truy cập trang cloudflare zero trust, tạo một tunnel mới.
+<img width="1905" height="922" alt="image" src="https://github.com/user-attachments/assets/23ed1eb4-576a-4581-826b-9466e92e5efa" />
+<img width="1912" height="708" alt="image" src="https://github.com/user-attachments/assets/db0ea1af-6049-494f-bf37-c956e7de6e17" />
+
++ Sau khi coppy dòng lệnh, thì paste vào terminal ubuntu, sau đó chọn next trong giao diện cloudflare mà đang hiện các lệnh copy. Rồi cài đặt route:
+<img width="1191" height="809" alt="image" src="https://github.com/user-attachments/assets/7eec9d91-c212-4112-9f14-09a9d7f3a445" />
+<img width="1627" height="261" alt="image" src="https://github.com/user-attachments/assets/40f0199f-e7f7-4f67-aeef-4b8f0fb5a94f" />
+
++ Sau đó truy cập địa chỉ: https://wordpress.thuhien2004.io.vn ở trên trình duyệt
 
