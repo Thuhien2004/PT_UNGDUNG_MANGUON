@@ -55,6 +55,9 @@ Nhận xét việc sử dụng mã nguồn mở wordpress để tạo website (t
 <img width="1191" height="809" alt="image" src="https://github.com/user-attachments/assets/7eec9d91-c212-4112-9f14-09a9d7f3a445" />
 <img width="1627" height="261" alt="image" src="https://github.com/user-attachments/assets/40f0199f-e7f7-4f67-aeef-4b8f0fb5a94f" />
 
-+ Sau đó truy cập địa chỉ: https://wordpress.thuhien2004.io.vn ở trên trình duyệt. Lúc này, bị lỗi ko thể truy cập được tại DNS chưa có record. 
++ Sau đó truy cập địa chỉ: https://wordpress.thuhien2004.io.vn ở trên trình duyệt. Lúc này, bị lỗi ko thể truy cập, kiểm tra DNS record.
 <img width="920" height="770" alt="image" src="https://github.com/user-attachments/assets/939dc280-fb7a-47c7-b45a-4c4406b64966" />
-+ Vào dash.cloudflare.com → thuhien2004.io.vn → DNS → Records 
++ Vào dash.cloudflare.com → thuhien2004.io.vn → DNS → Records . Nếu thấy có DNS rồi, thì vào lại trang chủ admin wordpress -> vào cài đặt chung rồi, nhập địa chỉ Url theo tunnel đã tạo:
+<img width="1916" height="969" alt="image" src="https://github.com/user-attachments/assets/4cabf4c6-28d6-4091-9984-b7c57ef2125b" />
+
+
