@@ -64,8 +64,67 @@ Nhận xét việc sử dụng mã nguồn mở wordpress để tạo website (t
 + Vào PHPMyAdmin tạo database:
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/ac36c459-a10a-41b1-9f8c-557dba0fb7bb" />
 
++ Thực ra lỗi cũng không nằm ở đây , em fix nãy giờ em chưa cap màn hình lại :))
+---------------------------------------------------------------
+- Tạo 1 bài viết trong wordpress giới thiệu về bản thân sinh viên: thông tin cá nhân, sở thích, ... bài viết có thể chứa hình ảnh, âm thanh, video, ...
+<img width="1801" height="869" alt="image" src="https://github.com/user-attachments/assets/ed76f38d-850c-4de6-99fb-727c8d7910a8" />
+<img width="1848" height="894" alt="image" src="https://github.com/user-attachments/assets/214b98d2-3c55-4dbb-8efb-72bd89b2f594" />
 
+Tạo 1 bài viết trong wordpress giới thiệu về ngành học mà em yêu thích trong trường TNUT. bài viết phải chứa hình ảnh, video, ...
+<img width="1914" height="837" alt="image" src="https://github.com/user-attachments/assets/386580e4-ed52-432c-a271-d2783f0f506e" />
+<img width="1673" height="889" alt="image" src="https://github.com/user-attachments/assets/51219179-eb69-4900-8243-858c576ce3d7" />
 
+--------------------------------------------------------------------------------------------------------------------------
+### Nhận xét việc sử dụng mã nguồn mở WordPress để tạo Website
+- Ưu điểm
+
+Trong quá trình thực hiện bài tập, em nhận thấy WordPress là một hệ quản trị nội dung mã nguồn mở rất phổ biến và dễ sử dụng.
+
+Các ưu điểm nổi bật:
+
+Miễn phí và mã nguồn mở.
+
+Cài đặt nhanh chóng bằng Docker.
+
+Giao diện quản trị thân thiện.
+
+Không yêu cầu nhiều kiến thức lập trình để xây dựng website cơ bản.
+
+Có nhiều giao diện (Theme) và tiện ích mở rộng (Plugin).
+
+Cộng đồng hỗ trợ lớn.
+
+Khó khăn gặp phải
+
+- Trong quá trình triển khai, em gặp một số khó khăn:
+
+Cấu hình Docker Compose ban đầu khá dễ nhầm lẫn
+
+Việc kết nối giữa WordPress và MariaDB cần cấu hình chính xác.
+
+Khó khăn lớn nhất là cấu hình Cloudflare Tunnel để public website lên Internet.
+
+Một số lỗi về DNS, quyền truy cập file và mạng Docker mất khá nhiều thời gian để xử lý.
+
+Mức độ tiêu tốn tài nguyên
+
+- Khi chạy hệ thống gồm MariaDB, WordPress, PHPMyAdmin và Cloudflared:
+
+MariaDB sử dụng khoảng 150–300 MB RAM.
+
+WordPress sử dụng khoảng 300–500 MB RAM.
+
+PHPMyAdmin sử dụng khoảng 50–100 MB RAM.
+
+Cloudflared sử dụng khoảng 50–100 MB RAM.
+
+Tổng cộng hệ thống tiêu thụ khoảng 600 MB đến 1 GB RAM tùy mức tải.
+
+- Đánh giá chung
+
+WordPress là giải pháp phù hợp để xây dựng website nhanh chóng với chi phí thấp. Việc kết hợp Docker Compose giúp triển khai dễ dàng, còn Cloudflare Tunnel giúp public website lên Internet mà không cần thuê VPS hoặc cấu hình NAT phức tạp.
+
+Qua bài thực hành này, em hiểu rõ hơn về Docker, WordPress, MariaDB và Cloudflare Tunnel, đồng thời có thêm kinh nghiệm triển khai một website hoàn chỉnh trên môi trường mã nguồn mở.
 
 
 
