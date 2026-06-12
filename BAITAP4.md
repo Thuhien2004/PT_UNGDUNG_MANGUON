@@ -20,7 +20,13 @@ Sau đó truy cập lại N8N để nạp Workflow, thiết lập các nút dư�
 <img width="890" height="618" alt="image" src="https://github.com/user-attachments/assets/05c9618b-d76a-46c0-b774-1d5d0381e777" />
 
 Sau đó , ta vào telegram trên máy , tìm chat với con bot đã tạo để nhắn nội dung bài viết . Rồi vào N8N kiểm tra xem đã có thể nhận được chưa?
+
  <img width="931" height="496" alt="image" src="https://github.com/user-attachments/assets/0204f83b-d977-470e-a0aa-4eb148e90915" />
 
+Sau khi chờ request từ gg Ai , ta sẽ gửi tin nhắn đi một lần nữa, bật chế độ pushlic để chạy ngầm , truy cập vào tele trên điện thoại , soạn ví dụ bài viết ta có:
+<img width="460" height="995" alt="image" src="https://github.com/user-attachments/assets/037ef3f3-1bab-4ce6-a107-3603c984f443" />
+
+Và bài viết cũng đã được post lên wordpress:
+<img width="979" height="280" alt="image" src="https://github.com/user-attachments/assets/bd8715fa-a4d2-47a0-b33b-7a2e490b9ecf" />
 
 
