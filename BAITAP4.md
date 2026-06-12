@@ -28,5 +28,6 @@ Sau khi chờ request từ gg Ai , ta sẽ gửi tin nhắn đi một lần nữ
 
 Và bài viết cũng đã được post lên wordpress:
 <img width="979" height="280" alt="image" src="https://github.com/user-attachments/assets/bd8715fa-a4d2-47a0-b33b-7a2e490b9ecf" />
+<img width="816" height="633" alt="image" src="https://github.com/user-attachments/assets/ef134340-0325-4973-b067-57f494ab2bf7" />
 
 
