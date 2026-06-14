@@ -36,11 +36,11 @@
      load lại các container  từ file nén để khôi phục các container đã xoá
 ----------------------------------------------------------------------------------------------
 # BÀI LÀM
-### Docker là gì?
+### 1. Docker là gì?
 - Docker là một nền tảng mã nguồn mở cho phép các nhà phát triển tự động đóng gói ứng dụng cùng với toàn bộ các thành phần phụ thuộc đi kèm (như mã nguồn, thư viện, môi trường chạy, cấu hình hệ thống) vào trong một đơn vị duy nhất gọi là Container.
 - Cơ chế hoạt động: Container chạy hoàn toàn độc lập và cô lập với hệ điều hành máy chủ (Host OS). Khác với công nghệ ảo hóa truyền thống (Virtual Machine - VM) yêu cầu tích hợp một hệ điều hành khách (Guest OS) nặng nề và chiếm dụng nhiều tài nguyên phần cứng, Docker Container chia sẻ chung nhân (Kernel) của hệ điều hành máy chủ.
 - Kết quả: Nhờ chia sẻ nhân, các container cực kỳ nhẹ (khởi động tính bằng giây thay vì bằng phút như VM) và đảm bảo ứng dụng luôn chạy đồng nhất trên mọi môi trường (từ máy tính cá nhân của lập trình viên cho đến máy chủ production thật).
-### Các từ khóa (Keywords) sử dụng trong docker-compose.yml
+### 2. Các từ khóa (Keywords) sử dụng trong docker-compose.yml
 - File docker-compose.yml sử dụng ngôn ngữ định dạng YAML để định nghĩa, cấu hình và quản lý một ứng dụng gồm tổ hợp nhiều dịch vụ (Multi-container). Dưới đây là các từ khóa cốt lõi dùng để mô tả một service, network, volume cùng ý nghĩa và ví dụ cụ thể:
 + version: 	Khai báo phiên bản cú pháp cấu hình của Docker Compose để hệ thống hiểu và hỗ trợ các tính năng tương ứng:	version: '3.8'
 + services	Từ khóa gốc cấp cao nhất, khai báo bắt đầu danh sách các container dịch vụ độc lập sẽ được tạo.	services app_mariadb:
@@ -58,5 +58,39 @@
 + command:	Ghi đè (override) câu lệnh chạy mặc định của image gốc bằng một câu lệnh thực thi mới khi khởi động.	command: python app.py
 + healthcheck:	Thiết lập bài kiểm tra định kỳ để xem container có đang hoạt động khỏe mạnh hay bị treo ngầm.	healthcheck:test: ["CMD", "curl", "-f","http://localhost"] logging
 + Cấu hình giới hạn dung lượng file log để tránh tình trạng rác log làm đầy ổ cứng của máy chủ.	logging options max-size: "10m"
+### 3. Ưu điểm khi sử dụng docker compose
+Đây là nội dung chi tiết trả lời cho câu hỏi về ưu điểm khi triển khai ứng dụng (deploy app) bằng Docker. Triển khai ứng dụng bằng Docker mang lại sự đột phá so với các phương pháp cài đặt vật lý (Bare-metal) hay máy ảo (Virtual Machine) truyền thống. Dưới đây là 5 ưu điểm cốt lõi:
+1. Tính nhất quán tuyệt đối (Đồng nhất môi trường)
+-	Bản chất: Docker đóng gói code và mọi thư viện, cấu hình đi kèm vào một khối duy nhất.
+-	Ưu điểm: Với Docker, môi trường bên trong container là cố định. Bạn mang container đó chạy trên Laptop, máy chủ nội bộ hay Cloud thì nó đều hoạt động y hệt nhau 100%.
+2. Tiết kiệm tối đa tài nguyên phần cứng
+-	Bản chất: Khác với máy ảo (VM) phải vác theo cả một Hệ điều hành khách (Guest OS) nặng hàng chục GB, các Docker container chia sẻ chung nhân (Kernel) của hệ điều hành máy chủ.
+-	Ưu điểm: Container cực kỳ nhẹ (chỉ tốn vài chục MB). Có thể chạy hàng chục, thậm chí hàng trăm dịch vụ (services) trên cùng một máy chủ VPS cấu hình thấp mà không lo bị ngốn cạn RAM hay CPU.
+3. Khởi động và triển khai siêu tốc
+-	Bản chất: Vì không phải khởi động một hệ điều hành mới như máy ảo, container thực chất chỉ là một tiến trình (process) chạy trên máy chủ.
+-	Ưu điểm: Thời gian tạo mới, khởi động, tắt hoặc khởi động lại (restart) hệ thống chỉ tính bằng giây. Điều này giúp việc cập nhật phiên bản mới (Update/Patch) hoặc khôi phục hệ thống khi có sự cố diễn ra chớp nhoáng.
+4. Tính cô lập an toàn (Isolation & Security)
+-	Bản chất: Mỗi container hoạt động trong một ranh giới khép kín độc lập.
+-	Ưu điểm: Các ứng dụng không bị xung đột với nhau (Ví dụ: Bạn có thể chạy cùng lúc 2 web dùng PHP 5 và PHP 8 trên cùng 1 máy chủ mà không bị lỗi). Ngoài ra, nếu một container bị hacker tấn công hoặc bị lỗi tràn RAM, nó cũng không thể lây lan làm sập các container khác hay sập hệ điều hành gốc của máy chủ.
+5. Hỗ trợ tuyệt vời cho Mở rộng (Scalability) và Tự động hóa (CI/CD)
+-	Bản chất: Việc cấu hình hạ tầng được viết thành code (thông qua file docker-compose.yml hoặc Dockerfile).
+-	Ưu điểm: Khi lượng người dùng tăng đột biến, quản trị viên chỉ cần gõ 1 dòng lệnh là có thể nhân bản (scale) từ 1 container lên 10 container để gánh tải ngay lập tức. Đây là nền tảng bắt buộc để xây dựng kiến trúc Microservices hiện đại.
+
+ ### 4. Triển khai app bằng docker trên máy chủ khi không có Internet
+Giai đoạn 1: Chuẩn bị và xuất dữ liệu (Tại Laptop cá nhân có Internet)
+-	Kéo (pull) hoặc tự build đầy đủ các Docker Image cần thiết cho hệ thống (ví dụ: Node-RED, MariaDB, Nginx...).
+-	Sử dụng lệnh nén docker save để xuất các image đang có trong máy thành các tệp tin vật lý định dạng .tar.
+-	Cú pháp lệnh: docker save -o <tên_file_nén.tar> <tên_image_gốc>
+-	Tập hợp tất cả các file .tar vừa xuất cùng với file cấu hình docker-compose.yml (và các thư mục volume/source code nếu có) vào chung một thư mục.
+Giai đoạn 2: Vận chuyển dữ liệu (Thao tác vật lý)
+-	Sao chép thư mục tổng hợp ở Giai đoạn 1 vào một thiết bị lưu trữ ngoại vi như USB hoặc Ổ cứng di động.
+-	Mang thiết bị lưu trữ này cắm trực tiếp vào máy chủ thực tế (Production Server) đang bị cô lập mạng (Offline).
+Giai đoạn 3: Phục hồi và khởi chạy (Tại Máy chủ Offline)
+-	Sao chép toàn bộ dữ liệu từ USB vào ổ cứng của máy chủ.
+-	Sử dụng lệnh docker load để giải nén và nạp các file .tar vào kho quản lý Image nội bộ của Docker trên máy chủ.
+-	Cú pháp lệnh: docker load -i <tên_file_nén.tar>
+-	Sử dụng lệnh docker images để kiểm tra lại, đảm bảo toàn bộ image đã được nạp thành công vào hệ thống.
+-	Mở Terminal (hoặc CMD), di chuyển (cd) vào đúng thư mục đang chứa file docker-compose.yml.
+-	Thực thi lệnh docker-compose up -d để Docker tự động đọc cấu hình và khởi chạy toàn bộ hệ thống ngầm định mà không cần kết nối Internet
 
 
